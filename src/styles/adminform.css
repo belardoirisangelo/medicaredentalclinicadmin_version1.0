@@ -1,0 +1,227 @@
+/* Color Palette based on screenshot */
+:root {
+    --color-dark-green: #0a4d46;
+    --color-medium-teal: #1a7f76;
+    --color-light-mint: #e0f2f1;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text-dark: #333333;
+    --color-text-highlight: #004d40; /* Darker teal for headings */
+    --color-input-bg: #ffffff;
+    --color-button-primary: #00897b; /* Teal button */
+    --color-button-hover: #00695c;
+    --color-border-light: #bdbdbd;
+}
+
+/* Global Container and Layout */
+.personnel-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-dark-green); /* Dark background behind the main form card */
+    font-family: Arial, sans-serif;
+    color: var(--color-text-dark);
+}
+
+/* Header Bar Styling */
+.header-bar {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.back-button:hover {
+    color: var(--color-light-mint);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile span {
+    font-size: 0.9em;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-light-mint);
+    border: 2px solid var(--color-white);
+    /* In a real app, this would be an image tag with a source */
+}
+
+/* Main Content and Sidebar Layout */
+.personnel-form-content {
+    display: flex;
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    width: 95%;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: var(--color-medium-teal);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: var(--color-white); /* Placeholder for icons */
+    opacity: 0.5;
+    border-radius: 4px;
+}
+
+.icon.active {
+    opacity: 1;
+    border: 2px solid var(--color-light-mint);
+}
+
+/* Form Area (The large card) */
+.form-area {
+    flex-grow: 1;
+    background-color: var(--color-light-mint);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.personnel-list-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.page-action-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-text-highlight);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Form Styling */
+.personnel-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0; /* Vertical gap between fields/rows */
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+.form-label span {
+    margin-bottom: 5px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: calc(50% - 10px); /* Account for padding/margin between the two inputs */
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-label input,
+.form-label select {
+    padding: 10px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-input-bg);
+}
+
+.form-label input:focus,
+.form-label select:focus {
+    border-color: var(--color-button-primary);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--color-button-primary);
+}
+
+/* Highlighted required fields - based on the 'Primary Address' style */
+.required-field {
+    color: var(--color-text-highlight);
+}
+
+/* Submit Button */
+.form-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align button to the left */
+    margin-top: 30px;
+}
+
+.submit-button {
+    background-color: var(--color-button-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    min-width: 150px;
+}
+
+.submit-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.submit-button:active {
+    transform: scale(0.98);
+}

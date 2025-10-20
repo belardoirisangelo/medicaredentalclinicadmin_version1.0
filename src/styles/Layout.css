@@ -1,0 +1,70 @@
+/* ===== Layout Container ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 80px;
+  background-color: #2a7a73;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  color: white;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 14px 0;
+  font-size: 22px;
+  transition: 0.2s;
+}
+
+.sidebar button:hover {
+  color: #00ffe5;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bde0da;
+  padding: 14px 28px;
+  color: #003d2e;
+  border-bottom: 3px solid #2a7a73;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 15px;
+  margin: 0;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header-profile .status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #28e09b;
+  border-radius: 50%;
+  position: relative;
+  top: 3px;
+}
